@@ -32,8 +32,6 @@ function Home() {
                 .finally(() => setLoading(false));
         }
     }, [search]);
-
-    // console.log(data);
     return (
         <div className="body">
             {(!isLoading) ?
@@ -58,6 +56,7 @@ function Home() {
 
                         : ""}
                     <div className="home_body">
+
                         {data.map((e) =>
                             <Link className="link" to={"/detail/" + e.idDrink}>
                                 <div className="block" key={e.strDrink}>

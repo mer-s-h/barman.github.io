@@ -5,7 +5,7 @@ import { useParams, Link } from "react-router-dom";
 function Detail() {
     const [ingredient, setIngredient] = useState([])
     const strIngredient = []
-    const [search, onChangeSearch] = useState("");
+    // const [search, onChangeSearch] = useState("");
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
     const { id } = useParams();
@@ -44,8 +44,6 @@ function Detail() {
                 })
 
                 setIngredient(filteredArray)
-
-                console.log(filteredArray);
             })
             .catch(error => console.log('error', error))
             .finally(() => setLoading(false));
@@ -53,28 +51,31 @@ function Detail() {
     }, []);
 
     return (
-        // <div>
         <div className="detai_body">
-            <h1>{data.strDrink}</h1>
+            {(!isLoading) ?
+                <>
+                    <h1>{data.strDrink}</h1>
 
-            <div className="detail_content">
-                <img className="img_detail" src={data.strDrinkThumb} alt="" />
-                <div className="col">
-                    
-                    <ul>
-                        {ingredient.map((e) =>
-                            <li>{e}</li>
-                        )}
-                    </ul>
+                    <div className="detail_content">
+                        <img className="img_detail" src={data.strDrinkThumb} alt="" />
+                        <div className="col">
+
+                            <ul>
+                                {ingredient.map((e) =>
+                                    <li>{e}</li>
+                                )}
+                            </ul>
 
 
-                    <p>{data.strInstructions}</p>
-                </div>
-            </div>
-
+                            <p>{data.strInstructions}</p>
+                        </div>
+                    </div>
+                </>
+                :
+                <h1 className="load">loading</h1>
+            }
         </div>
 
-        // </div>
     )
 }
 

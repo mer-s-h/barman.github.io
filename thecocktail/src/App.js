@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import Home from "./components/Home";
 import Detail from "./components/detail";
 import Nav from "./components/nav";
