@@ -1,0 +1,50 @@
+.result {
+    background-color: rgba(255, 255, 255, 0.129);
+    width: fit-content;
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5%;
+}
+
+h1{
+    font-size: 20px;
+}
+
+.link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.App{
+    background-color: black;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home_body {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    justify-content: center;
+}
+
+.block {
+    background-color: rgba(255, 255, 255, 0.129);
+    width: fit-content;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5%;
+}
+
+.img_home {
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
+}
